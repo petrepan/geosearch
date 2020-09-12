@@ -1,2 +1,2 @@
-# GeoSearch
-Geosearch is a tool that makes users to search for information about a particular place such as timezone and map.
+# geosearch
+geosearch is weather app that provides real time information about a particular location.
