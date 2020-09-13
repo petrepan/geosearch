@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'san-serif';
+    background-color: #ffffff;
+    overflow: hidden;
+    color: #333;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    padding: 16px;
+}
+
+nav h1 {
+    margin-right: 16px;
+}
+
+.weathersearch {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    padding: 6px 15px;
+    font-size: 15px;
+}
+
+section {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.result-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+::placeholder {
+    color: black;
+    font-size: 16px;
+}
