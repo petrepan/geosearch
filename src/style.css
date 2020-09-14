@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Poppins', 'san-serif';
-    background-color: #ffffff;
-    overflow: hidden;
+    background-color: #d9dbf3;
+    overflow: auto;
     color: #333;
 }
 
@@ -45,16 +45,111 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    max-width: 1200px;
+    width: 90%;
 }
 
 .result-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 
 ::placeholder {
     color: black;
     font-size: 16px;
+}
+
+.conditions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conditions h3 {
+    align-self: start;
+}
+
+.main {
+    padding: 10px;
+}
+
+.main .tempicon {
+    display: flex;
+    align-items: center;
+}
+
+.tempicon .temp {
+    font-size: 68px;
+}
+
+.main .description {
+    text-align: center;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.main .update {
+    text-align: center;
+}
+
+.secweather {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+}
+
+.secweather>div {
+    background-color: #fff;
+    margin: 5px;
+    padding: 10px;
+    min-width: 180px;
+    height: 150px;
+    border-radius: 7px;
+}
+
+.secweather .wind>div,
+.secweather .dew>div {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    height: 70%;
+    font-size: 28px;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+    height: 10px;
+    padding: 0;
+    
+}
+
+#myBar {
+    height: 10px;
+    background-color: green;
+}
+
+.dailymain {
+    margin: 26px;
+    width: 100%;
+}
+
+.daily {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+    margin: 6px 0;
+    overflow-x: auto;
+}
+
+.daily>div {
+    min-width: 150px;
+    float: left;
+    text-align: center;
+}
+
+.dailytemp span:first-child {
+    font-size: 24px;
+    padding-right: 5px;
 }
