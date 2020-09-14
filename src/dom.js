@@ -10,3 +10,5 @@ export const sunset = document.querySelector(".sunsetresult");
 export const sunrise = document.querySelector(".sunriseresult");
 export const dew = document.querySelector(".dewresult");
 export const daily = document.querySelector(".daily");
+export const loading = document.querySelector(".loading");
+export const myBar = document.getElementById("myBar");

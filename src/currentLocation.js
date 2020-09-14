@@ -9,7 +9,9 @@ import {
   sunset,
   sunrise,
   dew,
-  daily
+  daily,
+  loading,
+  myBar
 } from "./dom";
 import appid from "./api"
 
@@ -18,7 +20,6 @@ export const setPostion = function () {
     navigator.geolocation.getCurrentPosition(function (position) {
       let lat = position.coords.latitude;
       let long = position.coords.longitude;
-      console.log(lat, long);
       getWeather(lat, long);
     });
   } else {
@@ -35,32 +36,39 @@ export function getWeather(lat, long) {
     .then(function (resp) {
       showCurrentWeather(resp.current);
       showDailyWeather(resp.daily);
+      loading.style.display = "none";
     });
 }
 
 export function showCurrentWeather(current) {
-  location.innerText = "Your Current Location";
+  console.log(current)
+  location.innerText = ``;
   update.innerText = `Updated as at ${getTime(current.dt)}`;
+  icon.innerHTML = `<img src=http://openweathermap.org/img//wn/${current.weather[0].icon}@2x.png />`
   temp.innerHTML = `${Math.round(current.temp)} <span>&#176C</span>`;
-  description.innerHTML = current.weather[0].main;
+  description.innerHTML = current.weather[0].description;
   wind.innerHTML = `${current.wind_speed} <span>m/s</span>`;
   humidity.innerHTML = `${current.humidity} <span>%</span>`;
   sunrise.innerText = getTime(current.sunrise);
   sunset.innerText = `${getTime(current.sunset)}`;
   dew.innerHTML = `${Math.round(current.dew_point)} <span>&#176</span>`;
+  myBar.style.width = `${current.humidity}%`;
 }
 
 export function showDailyWeather(dailyresult) {
     let div = "";
     console.log(dailyresult);
     dailyresult.forEach(daily => {
-        div += `<div><div>${getDay(daily.dt)}</div>
-        <img src="">
-        <div><span>${daily.temp.max}</span><span>${daily.temp.min}</span></div>
-        <div>${daily.weather[0].description}</div></div>
+      div += `<div>
+        <div>${getDay(daily.dt)}</div>
+        <img src=http://openweathermap.org/img//wn/${daily.weather[0].icon}.png>
+        <div class="dailytemp"><span>${Math.round(daily.temp.max)}&#176</span><span>${Math.round(
+        daily.temp.min
+      )}&#176</span></div>
+        <div>${daily.weather[0].description}</div>
+        </div>
         `;
     })
-    console.log(div)
     daily.innerHTML = div
 }
 
