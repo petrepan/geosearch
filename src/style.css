@@ -19,8 +19,8 @@ body {
 nav {
     display: flex;
     align-items: center;
-    max-width: 1200px;
-    width: 90%;
+    max-width: 1300px;
+    width: 92%;
     margin: auto;
     padding: 16px;
 }
@@ -95,8 +95,6 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
 }
 
 .secweather>div {
@@ -122,7 +120,7 @@ section {
     background-color: grey;
     height: 10px;
     padding: 0;
-    
+    margin-top: 1.7em;
 }
 
 #myBar {
@@ -130,9 +128,32 @@ section {
     background-color: green;
 }
 
+.humidityresult{
+    text-align: center;
+    font-size: 22px;
+}
+
+.sunriseset > div{
+    text-align: center;
+    font-size: 22px;
+}
+
+.sunriseresult:before{
+content: "🌝";
+font-size: 22px;
+padding-right: 10px;
+}
+
+.sunsetresult::before{
+    content: "🌚";
+    font-size: 22px;
+    padding-right: 10px;
+}
+
 .dailymain {
     margin: 26px;
     width: 100%;
+
 }
 
 .daily {
