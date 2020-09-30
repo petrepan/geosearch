@@ -29,7 +29,7 @@ export const setPostion = function () {
 };
 
 export function getWeather(lat, long) {
-  let api = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${appid}&units=metric`;
+  let api = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${appid}&units=metric`;
   fetch(api)
     .then(function (res) {
       return res.json();

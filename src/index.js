@@ -44,7 +44,7 @@ function getSearchMethod(searchTerm) {
 function searchWeather(searchTerm) {
   getSearchMethod(searchTerm);
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&APPID=${appid}&units=metric`
+    `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&APPID=${appid}&units=metric`
   )
     .then((result) => {
       return result.json();
@@ -52,10 +52,10 @@ function searchWeather(searchTerm) {
     .then((result) => {
       console.log(result);
       if (result.cod != "404") {
-        useLatAndLong(result.coord)
+        useLatAndLong(result.coord);
         init(result);
-      } else {  
-      error.innerHTML = "Location not available";
+      } else {
+        error.innerHTML = "Location not available";
       }
     })
     .catch((err) => {
@@ -109,7 +109,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
 /* get data for hourly and daily weather */
 
 function useLatAndLong(result) {
-  let api = `http://api.openweathermap.org/data/2.5/onecall?lat=${result.lat}&lon=${result.lon}&appid=${appid}&units=metric`;
+  let api = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/onecall?lat=${result.lat}&lon=${result.lon}&appid=${appid}&units=metric`;
   fetch(api)
     .then(function (res) {
       return res.json();
