@@ -11,12 +11,13 @@ body {
 }
 
 .container{
-    width: 100vw;
+    width: 100%;
 }
 
 nav {
     display: flex;
     align-items: center;
+    max-width: 1300px;
     width: 100%;
     margin: auto;
     padding: 13px 8px;
@@ -36,6 +37,10 @@ input {
     font-size: 15px;
 }
 
+input[type = submit]{
+    cursor: pointer;
+}
+
 section {
     width: 100%;
     padding: 22px;
@@ -48,7 +53,7 @@ section {
 
 ::placeholder {
     color: black;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .loading {
@@ -268,4 +273,50 @@ padding-right: 10px;
 .dailytemp span:first-child {
     font-size: 24px;
     padding-right: 5px;
+}
+
+@media screen and (max-width: 500px){
+    nav {
+        flex-direction: column;
+    }
+
+    nav h1 {
+        margin: 0 0 8px 0;
+    }
+
+    input {
+        padding: 5px 12px;
+        font-size: 15px;
+    }
+
+    .main{
+        margin-bottom: 16px;
+    }
+
+    .tempicon .temp {
+        font-size: 58px;
+    }
+
+    .main .description {
+        font-size: 18px;
+    }
+
+    .secweather>div {
+        min-width: 300px;
+    }
+
+    .sunriseset>div {
+        text-align: left;
+        font-size: 22px;
+    }
+
+    .hour, .daily {
+        padding: 6px;
+        margin: 6px 0;
+    }
+
+    .hour>div, .daily>div {
+        float: left;
+        text-align: center;
+    }
 }
