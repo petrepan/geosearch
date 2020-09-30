@@ -1,0 +1,36 @@
+{
+    "name": "geosearch",
+    "short_name": "geosearch",
+    "start_url": "/",
+    "scope": "/",
+    "display": "minimal-ui",
+    "background_color": "#ffe9d2",
+    "theme_color": "#ffe1c4",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/src/196.png",
+            "type": "image/png",
+            "sizes": "196x196",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/src/216.png",
+            "type": "image/png",
+            "sizes": "216x216",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/src/256.png",
+            "type": "image/png",
+            "sizes": "256x256",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/src/512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ]
+}
