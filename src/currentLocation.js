@@ -65,10 +65,10 @@ export function showHourWeather(hourresult) {
   hourresult.forEach((hour) => {
     div += `<div>
         <div>${getTime(hour.dt)}</div>
-        <img src=http://openweathermap.org/img//wn/${hour.weather[0].icon}.png>
-        <div class="hourtemp"><span>${Math.round(
-          hour.temp
-        )}&#176</span></div>
+        <img src=https://cors-anywhere.herokuapp.com/http://openweathermap.org/img//wn/${
+          hour.weather[0].icon
+        }.png>
+        <div class="hourtemp"><span>${Math.round(hour.temp)}&#176</span></div>
         <div>${hour.weather[0].description}</div>
         </div>
         `;
@@ -81,7 +81,9 @@ export function showDailyWeather(dailyresult) {
   dailyresult.forEach((daily) => {
     div += `<div>
         <div>${getDay(daily.dt)}</div>
-        <img src=http://openweathermap.org/img//wn/${daily.weather[0].icon}.png>
+        <img src=https://cors-anywhere.herokuapp.com/http://openweathermap.org/img//wn/${
+          daily.weather[0].icon
+        }.png>
         <div class="dailytemp"><span>${Math.round(
           daily.temp.max
         )}&#176</span><span>${Math.round(daily.temp.min)}&#176</span></div>

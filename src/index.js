@@ -70,7 +70,7 @@ function init(current) {
   location.innerText = `${current.name}`;
   country.innerText = `${current.sys.country}`;
   update.innerText = `Updated as at ${getTime(current.dt)}`;
-  icon.innerHTML = `<img src=http://openweathermap.org/img//wn/${current.weather[0].icon}@2x.png />`;
+  icon.innerHTML = `<img src=https://cors-anywhere.herokuapp.com/http://openweathermap.org/img//wn/${current.weather[0].icon}@2x.png />`;
   temp.innerHTML = `${Math.round(current.main.temp)} <span>&#176C</span>`;
   description.innerHTML = current.weather[0].description;
   wind.innerHTML = `${current.wind.speed} <span>m/s</span>`;
@@ -126,7 +126,9 @@ function showHourWeather(hourresult) {
   hourresult.forEach((hour) => {
     div += `<div>
         <div>${getTime(hour.dt)}</div>
-        <img src=http://openweathermap.org/img//wn/${hour.weather[0].icon}.png>
+        <img src=https://cors-anywhere.herokuapp.com/http://openweathermap.org/img//wn/${
+          hour.weather[0].icon
+        }.png>
         <div class="hourtemp"><span>${Math.round(hour.temp)}&#176</span></div>
         <div>${hour.weather[0].description}</div>
         </div>
@@ -139,7 +141,9 @@ function showDailyWeather(dailyresult) {
   dailyresult.forEach((daily) => {
     div += `<div>
         <div>${getDay(daily.dt)}</div>
-        <img src=http://openweathermap.org/img//wn/${daily.weather[0].icon}.png>
+        <img src=https://cors-anywhere.herokuapp.com/http://openweathermap.org/img//wn/${
+          daily.weather[0].icon
+        }.png>
         <div class="dailytemp"><span>${Math.round(
           daily.temp.max
         )}&#176</span><span>${Math.round(daily.temp.min)}&#176</span></div>
