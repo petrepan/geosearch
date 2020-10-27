@@ -1,0 +1,241 @@
+body {
+    overflow-x: hidden;
+}
+
+.dropdown-menu{
+    border-radius: 0;
+    border-top: 1px solid;
+    top: 54px;
+    left: -30px;
+}
+
+.nav-link:hover{
+    color: #007bff!important;
+}
+
+.hero {
+    position: relative;
+    height: 70vh;
+    overflow-x: hidden;
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("https://pointfindertheme.com/multidirectory/wp-content/uploads/sites/55/2016/01/los-angeles-night-view-wallpaper-21253-22159-hd-wallpapers.jpg");
+    background-attachment: scroll;
+    min-width: 1324px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-pattern {
+    background-image: url("https://pointfindertheme.com/multidirectory/wp-content/plugins/Ultimate_VC_Addons/assets/images/patterns/09.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-attachment: fixed;
+    min-width: 1324px;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: -1;
+}
+
+.hero-form {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-form input:focus,
+.hero-form select:focus {
+    outline: 0;
+}
+
+.hero-input {
+    min-width: 212px;
+}
+
+.hero-input > div{
+    padding: 6px 4px;
+    min-height: 40px;
+}
+
+.hero-input input{
+    background: none;
+    border: none;
+}
+
+.hero-input ::placeholder {
+    font-size: 13px;
+    opacity: .7;
+}
+
+.hero-input select {
+    -webkit-appearance: none;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+.img-card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: .5;
+    display: inline-block;
+}
+
+.show-hover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0rem;
+    opacity: 0;
+    transform: translateY(-70px);
+    transition: all .3s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.img-card:hover .show-hover {
+    transform: translateY(0px);
+    opacity: 0.9;
+    pointer-events: fill;
+}
+
+.img-card p:first-of-type {
+    position: absolute;
+    right: -25px;
+    top: 20px;
+    transform: rotate(45deg);
+    font-size: 11px;
+    width: 120px;
+}
+
+.img-card p:last-of-type {
+    position: absolute;
+    right: 5px;
+    bottom: -10px;
+    font-size: 14px;
+}
+
+.detail-card h5 {
+    font-size: 15px;
+}
+
+.detail-card p {
+    font-size: 12px;
+}
+
+
+/* owl */
+
+.owl-nav button {
+    position: absolute;
+    top: 50%;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-nav button.owl-prev {
+    left: 15px;
+}
+
+.owl-nav button.owl-next {
+    right: 20px;
+}
+
+.owl-dots {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.owl-dots button.owl-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #ccc;
+    margin: 0 3px;
+}
+
+.owl-dots button.owl-dot.active {
+    width: 25px;
+    border-radius: 20px;
+    background-color: #000;
+}
+
+.owl-dots button.owl-dot:focus {
+    outline: none;
+}
+
+.owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.38) !important;
+
+}
+
+.owl span,
+.owl-nav span {
+    color: #fff;
+    font-size: 50px;
+    position: relative;
+    top: -5px;
+}
+
+.owl-nav button:focus {
+    outline: none;
+}
+
+.skew-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("https://pointfindertheme.com/multidirectory/wp-content/uploads/sites/55/2015/01/slide1.jpg");
+    background-attachment: scroll;
+    min-width: 1076px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+    z-index: -1;
+}
+
+.bg-design {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: inherit;
+    background-position: center bottom;
+    background-image: url("https://pointfindertheme.com/multidirectory/wp-content/uploads/sites/55/2016/01/footer1-copy.png");
+    height: 95px;
+}
+
+.foot li:before {
+    content: '\e821';
+    margin-right: .3em;
+}
+
+
+@media screen and (max-width: 1002px) {
+    .userhide{
+        display: none;
+    }
+}
